@@ -185,7 +185,7 @@ Each component is a standalone ROS 2 node. Swap OpenCV for YOLO, swap the text i
 
 ---
 
-## 👤 Author
+## 👤 Author - Ameed Nazhruudeen
 
 Built as a 5-day ROS 2 learning project.  
 Designed to be beginner-friendly while showcasing a real perception–planning–execution pipeline.
