@@ -1,4 +1,5 @@
-# 🦾 IntelliGrasp
+# 🦾 Cobra Arm
+
 > Say what to pick. The robot sees it and grabs it.
 
 A ROS 2 simulation where a robot arm uses a camera to find objects on a table and pick them up based on a text command. Fully simulated — no real robot needed.
