@@ -68,7 +68,7 @@ ros2 topic pub /pick_object std_msgs/String "data: 'red cube'"
 
 ---
 
-## 👤 Author
+## 👤 Author - Ameed Nazhurudeen
 Built as a 5-day ROS 2 beginner project.
 
 ## 📄 License
