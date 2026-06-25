@@ -1,4 +1,5 @@
-# 🦾 IntelliGrasp
+# 🦾 COBRAARM
+
 ### Language-Driven Visual Pick-and-Place for Collaborative Robots
 
 > *Say what to pick. The robot sees it, plans the path, and grabs it — fully simulated in ROS 2.*
