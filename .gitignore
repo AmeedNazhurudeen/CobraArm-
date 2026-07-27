@@ -1,0 +1,6 @@
+cobot_ws/build/
+cobot_ws/install/
+cobot_ws/log/
+*.pyc
+__pycache__/
+.vscode/
