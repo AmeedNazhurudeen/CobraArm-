@@ -1,0 +1,108 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <world name="default">
+
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+    <!-- Table top: 1.1m x 0.9m, elongated in X, centered under the robot's mount
+         point (robot position unchanged) so objects can sit farther from the
+         base while staying inside the UR5's ~0.85m reach -->
+    <model name="table">
+      <static>true</static>
+      <pose>0 0 0.735 0 0 0</pose>
+      <link name="link">
+        <collision name="top_collision">
+          <geometry>
+            <box><size>1.1 0.9 0.03</size></box>
+          </geometry>
+        </collision>
+        <visual name="top_visual">
+          <geometry>
+            <box><size>1.1 0.9 0.03</size></box>
+          </geometry>
+          <material>
+            <ambient>0.55 0.4 0.25 1</ambient>
+            <diffuse>0.55 0.4 0.25 1</diffuse>
+          </material>
+        </visual>
+
+        <collision name="leg1_collision">
+          <pose>0.52 0.42 -0.375 0 0 0</pose>
+          <geometry><cylinder><radius>0.02</radius><length>0.72</length></cylinder></geometry>
+        </collision>
+        <visual name="leg1_visual">
+          <pose>0.52 0.42 -0.375 0 0 0</pose>
+          <geometry><cylinder><radius>0.02</radius><length>0.72</length></cylinder></geometry>
+          <material><ambient>0.3 0.3 0.3 1</ambient><diffuse>0.3 0.3 0.3 1</diffuse></material>
+        </visual>
+
+        <collision name="leg2_collision">
+          <pose>-0.52 0.42 -0.375 0 0 0</pose>
+          <geometry><cylinder><radius>0.02</radius><length>0.72</length></cylinder></geometry>
+        </collision>
+        <visual name="leg2_visual">
+          <pose>-0.52 0.42 -0.375 0 0 0</pose>
+          <geometry><cylinder><radius>0.02</radius><length>0.72</length></cylinder></geometry>
+          <material><ambient>0.3 0.3 0.3 1</ambient><diffuse>0.3 0.3 0.3 1</diffuse></material>
+        </visual>
+
+        <collision name="leg3_collision">
+          <pose>0.52 -0.42 -0.375 0 0 0</pose>
+          <geometry><cylinder><radius>0.02</radius><length>0.72</length></cylinder></geometry>
+        </collision>
+        <visual name="leg3_visual">
+          <pose>0.52 -0.42 -0.375 0 0 0</pose>
+          <geometry><cylinder><radius>0.02</radius><length>0.72</length></cylinder></geometry>
+          <material><ambient>0.3 0.3 0.3 1</ambient><diffuse>0.3 0.3 0.3 1</diffuse></material>
+        </visual>
+
+        <collision name="leg4_collision">
+          <pose>-0.52 -0.42 -0.375 0 0 0</pose>
+          <geometry><cylinder><radius>0.02</radius><length>0.72</length></cylinder></geometry>
+        </collision>
+        <visual name="leg4_visual">
+          <pose>-0.52 -0.42 -0.375 0 0 0</pose>
+          <geometry><cylinder><radius>0.02</radius><length>0.72</length></cylinder></geometry>
+          <material><ambient>0.3 0.3 0.3 1</ambient><diffuse>0.3 0.3 0.3 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Red Cube: farther out from the robot's base, well clear of it -->
+    <model name="red_cube">
+      <pose>0.45 0.2 0.775 0 0 0</pose>
+      <link name="link">
+        <inertial><mass>0.1</mass></inertial>
+        <collision name="collision">
+          <geometry><box><size>0.05 0.05 0.05</size></box></geometry>
+        </collision>
+        <visual name="visual">
+          <geometry><box><size>0.05 0.05 0.05</size></box></geometry>
+          <material><ambient>1 0 0 1</ambient><diffuse>1 0 0 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Blue Cylinder -->
+    <model name="blue_cylinder">
+      <pose>0.4 -0.2 0.78 0 0 0</pose>
+      <link name="link">
+        <inertial><mass>0.1</mass></inertial>
+        <collision name="collision">
+          <geometry><cylinder><radius>0.025</radius><length>0.06</length></cylinder></geometry>
+        </collision>
+        <visual name="visual">
+          <geometry><cylinder><radius>0.025</radius><length>0.06</length></cylinder></geometry>
+          <material><ambient>0 0 1 1</ambient><diffuse>0 0 1 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+
+  </world>
+</sdf>

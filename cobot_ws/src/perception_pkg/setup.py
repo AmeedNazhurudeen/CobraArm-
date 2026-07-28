@@ -24,6 +24,7 @@ setup(
     },
     entry_points={
         'console_scripts': [
+            'object_detector = perception_pkg.object_detector:main',
         ],
     },
 )
